@@ -15,8 +15,8 @@ module CurrencyExchangeRate
 
     def convert_from_rub(sum, type)
       raise if sum.negative?
-
       data = get_data('latest.js')
+      type.upcase!
       sum * data['rates'][type]
     rescue StandardError
       puts 'Please сheck the correctness of the amount or name of the currency'
@@ -24,8 +24,8 @@ module CurrencyExchangeRate
 
     def convert_in_rub(sum, type)
       raise if sum.negative?
-
       data = get_data('daily_json.js')
+      type.upcase!
       sum * data['Valute'][type]['Value'] / data['Valute'][type]['Nominal']
     rescue ZeroDivisionError
       puts 'zero division!'
