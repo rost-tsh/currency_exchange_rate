@@ -8,7 +8,7 @@
 
 * $ cd "PATH to project"
 * $ gem build currency_exchange_rate.gemspec
-* $ gem install currency_exchange_rate-"CHECK CHANGELOG.md".gem
+* $ gem install currency_exchange_rate-0.0.2.gem
 
 # gem methods
 
